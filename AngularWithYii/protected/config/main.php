@@ -52,6 +52,14 @@ return array(
 // 		),
 		// uncomment the following to use a MySQL database
 		
+
+// 		'db'=>array(
+// 			'connectionString' => 'mysql:host=db524866746.db.1and1.com;dbname=db524866746',
+// 			'emulatePrepare' => true,
+// 			'username' => 'dbo524866746',
+// 			'password' => 'nativo32!',
+// 			'charset' => 'utf8',
+// 		),
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=angularwithyii',
 			'emulatePrepare' => true,

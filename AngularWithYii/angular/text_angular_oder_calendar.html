@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+  
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jquerymobile/1.4.2/jquery.mobile.min.css" />
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="all" href="daterangepicker-bs3.css" />
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="moment.js"></script>
+  <script type="text/javascript" src="daterangepicker.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
+  <script src="todo.js"></script>  
+</head>
+
+
+<body ng-controller="mainController" >
+<div class="well" style="overflow: auto" >
+  <div id="reportrange" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+     <span></span> <b class="caret"></b>
+   </div>
+   <button type="submit" class="btn btn-primary" ng-click="suche()">Suche</button>
+    
+
+    
+
+ </div>
+<div style="visibility:hidden">
+    <input   name="nameStartDate" ng-model="date.startDate" id="hiddenStartDate" value="1"  />
+    <input   name="nameEndDate"   ng-model="date.endDate" id="hiddenEndDate"    value="1"   />
+    <input   name="nameLabel"   ng-model="date.label" id="hiddenLabel"    value="1"         />
+</div>
+<div >
+<table data-role="table" id="movie-table" data-mode="columntoggle" class="ui-responsive table-stroke ui-table ui-table-columntoggle" style="font-size:10pt;">
+    <thead align="left">
+        <tr>
+            <th class="ui-table-priority-1">Nummer</th>
+            <th class="ui-table-priority-1">Filiale</th>
+            <th class="ui-table-priority-1">Datum</th>
+            <th class="ui-table-priority-1" style="text-align:center;" >Kasse-Beleg</th>
+            <th class="ui-table-priority-2" style="text-align:center;" >Kasse-Ist</th>
+            <th class="ui-table-priority-2" style="text-align:center;" >Kasse-Diff.</th>
+            <th class="ui-table-priority-2" style="text-align:center;" >Stunden</th>
+            <th class="ui-table-priority-2" style="text-align:center;" >Std-Leist.</th>
+            <th class="ui-table-priority-3" style="text-align:center;" >Kunden</th>
+            <th class="ui-table-priority-3" style="text-align:center;" >Ums/Kunde</th>
+            <th class="ui-table-priority-4" style="text-align:center;" >Lieferung</th>
+            <th class="ui-table-priority-4" style="text-align:center;" >Retouren</th>
+            <th class="ui-table-priority-4" style="text-align:center;" >Ret%</th>
+      
+            
+        </tr>
+    </thead>
+    <tbody align="left"> 
+    <tr ng-repeat="post in posts">
+                <td class="ui-table-priority-1" > {{post.KundeNr}} </th>
+                <td class="ui-table-priority-1" > {{post.Kurzbezeichung}} </td>
+                <td class="ui-table-priority-1" > {{post.Datum}} </td>
+                <td class="ui-table-priority-1"  style="text-align: right;"> {{post.KasseSoll}}  </td>
+                <td class="ui-table-priority-2"  style="text-align: right;"> {{post.KasseIst}}  </td>
+                <td class="ui-table-priority-2"  style="text-align: right;"> {{post.KasseDiff}}  </td>
+                <td class="ui-table-priority-2"  style="text-align: right;"> {{post.Stunden}}  </td>
+                <td class="ui-table-priority-2"  style="text-align: right;"> {{post.StdLeist}}  </td>
+                <td class="ui-table-priority-3"  style="text-align: right;"> {{post.Kunden}}  </td>
+                <td class="ui-table-priority-3"  style="text-align: right;"> {{post.UmsKunde}}  </td>
+                <td class="ui-table-priority-4"  style="text-align: right;"> {{post.Lieferung}}  </td>
+                <td class="ui-table-priority-4"  style="text-align: right;"> {{post.Retouren}}  </td>
+                <td class="ui-table-priority-4"  style="text-align: right;"> {{post.RetProz}} </td>
+    </tr>
+       
+      
+ 
+      </tbody>
+     </table>
+  </div>
+  
+  <!--
+  type="hidden"
+  <div ng-controller="otherServer">
+    <ul ng-repeat="student in students">
+      <li>{{student.id}},{{student.name}}</li>
+    </ul>
+  </div>
+-->
+</body>
+  <script type="text/javascript">
+            var selectionL = "0";
+             var check11 = "";   var check21 = "";   var query1 = 0;
+             var check12 = "";   var check22 = "";   var query2 = 0;
+             var check13 = "";   var check23 = "";   var query3 = 0;
+             var check14 = "";   var check24 = "";   var query4 = 0;
+             var check15 = "";   var check25 = "";   var query5 = 0;
+             var check16 = "";   var check26 = "";   var query6 = 0;
+             var check17 = "";   var check27 = "";   var query7 = 0;
+             var check18 = "";   var check28 = "";   var query8 = 0;
+            var startdatumL= "";
+            var enddatumL = "";
+            var dateManualSelect = 364;// HIER wieviel Tage abziehen?
+            var Zeit = new Date();
+            var testdatum = new Date();
+            
+            testdatum.setTime(Zeit.getTime() - (dateManualSelect*24*60*60*1000));
+           // alert(testdatum);
+
+      function dateSplit4sql2(splitDatOld) {
+                var tempVar = "" + splitDatOld.value;
+                var splitDat = "";
+                if (tempVar.length > 0) {
+                    for (var i = 6; i <= 9; i++) {
+                        splitDat += tempVar[i];
+                    }
+                    splitDat += "-";
+                    for (var i = 3; i <= 4; i++) {
+                        splitDat += tempVar[i];
+                    }
+                    splitDat += "-";
+                    for (var i = 0; i <= 1; i++) {
+                        splitDat += tempVar[i];
+                    }
+                    
+                }
+                return splitDat;
+            }
+            
+     //var vStartTag = new date();
+//vStartTag = moment().subtract('days',dateManualSelect);               alert(vStartTag);
+            $(document).ready(function() {
+                
+                  $('#reportrange').daterangepicker(
+                     {
+                        startDate: testdatum,
+                        endDate: testdatum,
+                        minDate: '01/01/2012',
+                        maxDate: '12/31/2014',
+                        dateLimit: { days: 365 },
+                        showDropdowns: true,
+                        showWeekNumbers: true,
+                        timePicker: false,
+                        timePickerIncrement: 1,
+                        timePicker12Hour: true,
+                        ranges: {
+                           'Gestern': [moment().subtract('days', 1).subtract('days', dateManualSelect), moment().subtract('days', 1).subtract('days',dateManualSelect)],
+                           'Vorgestern': [moment().subtract('days', 2).subtract('days', dateManualSelect), moment().subtract('days', 2).subtract('days', dateManualSelect)],
+                          // '7 Tage n.A.': [moment().subtract('days', 6), moment()],
+                          // '30 Tage n.A.': [moment().subtract('days', 29), moment()],
+                           'Diese Woche':  [moment().subtract('days', dateManualSelect).startOf('week').add('days',1), moment().subtract('days', dateManualSelect).endOf('week').add('days',1)],
+                           'Letzte Woche': [moment().subtract('days', dateManualSelect).subtract('week', 1).startOf('week').add('days',1), moment().subtract('days', dateManualSelect).subtract('week', 1).endOf('week').add('days',1)],
+                           'Dieser Monat': [moment().subtract('days', dateManualSelect).startOf('month'), moment().subtract('days', dateManualSelect).endOf('month')],
+                           'Letzter Monat':[moment().subtract('days', dateManualSelect).subtract('month', 1).startOf('month'), moment().subtract('days', dateManualSelect).subtract('month', 1).endOf('month')],
+                           'Dieses Jahr':  [moment().subtract('days', dateManualSelect).startOf('year'), moment().subtract('days', dateManualSelect).endOf('year')],
+                           'Letztes Jahr': [moment().subtract('days', dateManualSelect).subtract('year', 1).startOf('year'), moment().subtract('days', dateManualSelect).subtract('year', 1).endOf('year')]
+                        },
+                        opens: 'right',
+                        buttonClasses: ['btn btn-default'],
+                        applyClass: 'btn-small btn-primary',
+                        cancelClass: 'btn-small',
+                        format: 'DD.MM.YYYY dd',
+                        separator: ' to ',
+                        locale: {
+                            applyLabel: 'OK',
+                            fromLabel: 'vom',
+                            toLabel: 'bis zum',
+                            customRangeLabel: 'Auswahl',
+                            daysOfWeek: ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr','Sa'],
+                            monthNames: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+                            firstDay: 1
+                        }
+                     },
+                     
+                     function(start, end) {
+                      console.log("Callback has been called!");
+                      
+                  selectionL = "0";    
+                  //start.setTime(start.getTime() - testdatum.getTime());
+                  //end.setTime(end.getTime() - testdatum.getTime());
+                  if(start.format('DD.MM.YYYY dd')[11] === 'M'){
+                    day4Screen1 = "Mo";
+                  }
+                  if(start.format('DD.MM.YYYY dd')[11] === 'T'){
+                    if(start.format('DD.MM.YYYY dd')[12] === 'u'){
+                        day4Screen1="Di";
+                    }
+                    if(start.format('DD.MM.YYYY dd')[12] === 'h'){
+                        day4Screen1="Do";
+                    }
+                  }
+                  if(start.format('DD.MM.YYYY dd')[11] === 'W'){
+                     day4Screen1="Mi";
+                  }
+                  if(start.format('DD.MM.YYYY dd')[11] === 'F'){
+                    day4Screen1="Fr";
+                  }
+                  if(start.format('DD.MM.YYYY dd')[11] === 'S'){
+                    if(start.format('DD.MM.YYYY dd')[12] === 'a'){
+                      day4Screen1="Sa";
+                    }
+                    if(start.format('DD.MM.YYYY dd')[12] === 'u'){
+                        day4Screen1="So";
+                    }
+                  }
+                  
+                  
+                  if(end.format('DD.MM.YYYY dd')[11] === 'M'){
+                    day4Screen2 = "Mo";
+                  }
+                  if(end.format('DD.MM.YYYY dd')[11] === 'T'){
+                    if(end.format('DD.MM.YYYY dd')[12] === 'u'){
+                        day4Screen2="Di";
+                    }
+                    if(end.format('DD.MM.YYYY dd')[12] === 'h'){
+                        day4Screen2="Do";
+                    }
+                  }
+                  if(end.format('DD.MM.YYYY dd')[11] === 'W'){
+                     day4Screen2="Mi";
+                  }
+                  if(end.format('DD.MM.YYYY dd')[11] === 'F'){
+                    day4Screen2="Fr";
+                  }
+                  if(end.format('DD.MM.YYYY dd')[11] === 'S'){
+                    if(end.format('DD.MM.YYYY dd')[12] === 'a'){
+                      day4Screen2="Sa";
+                    }
+                    if(end.format('DD.MM.YYYY dd')[12] === 'u'){
+                        day4Screen2="So";
+                    }
+                  }
+                  
+               
+                  
+                   if(query1 === 0){check11 = moment().subtract('days', 1).subtract('days',dateManualSelect);                   check12 = moment().subtract('days',dateManualSelect).subtract('days', 1);}
+                   if(query2 === 0){check21 = moment().subtract('days', 2).subtract('days',dateManualSelect);                   check22 = moment().subtract('days',dateManualSelect).subtract('days', 2);}
+                   if(query3 === 0){check31 = moment().subtract('days',dateManualSelect).startOf('week').add('days',1);                       check32 = moment().subtract('days',dateManualSelect).endOf('week').add('days',1);}
+                   if(query4 === 0){check41 = moment().subtract('days',dateManualSelect).subtract('week', 1).startOf('week').add('days',1);   check42 = moment().subtract('days',dateManualSelect).subtract('week', 1).endOf('week').add('days',1);}
+                   if(query5 === 0){check51 = moment().subtract('days',dateManualSelect).startOf('month');                      check52 = moment().subtract('days',dateManualSelect).endOf('month');}
+                   if(query6 === 0){check61 = moment().subtract('days',dateManualSelect).subtract('month', 1).startOf('month'); check62 = moment().subtract('days',dateManualSelect).subtract('month', 1).endOf('month');}
+                   if(query7 === 0){check71 = moment().subtract('days',dateManualSelect).startOf('year');                       check72 = moment().subtract('days',dateManualSelect).endOf('year');}
+                   if(query8 === 0){check81 = moment().subtract('days',dateManualSelect).subtract('year', 1).startOf('year');   check82 = moment().subtract('days',dateManualSelect).subtract('year', 1).endOf('year');}
+                  
+                  
+                   
+                        //   'Last 7 Days': [moment().subtract('days', 6), moment()],
+                        //   'Last 30 Days': [moment().subtract('days', 29), moment()],
+                           
+                  
+                  
+                  if(start.format('DD.MM.YYYY') === check11.format('DD.MM.YYYY')){
+                    if(end.format('DD.MM.YYYY') === check12.format('DD.MM.YYYY')){
+                        selectionL = "1"; query1 = 1;
+                        //start.subtract('days',dateManualSelect);
+                     // end.subtract('days',dateManualSelect);
+                    }
+                  }
+                  if(start.format('DD.MM.YYYY') === check21.format('DD.MM.YYYY')){
+                    if(end.format('DD.MM.YYYY') === check22.format('DD.MM.YYYY')){
+                         selectionL = "2"; query2 = 1;
+                        // start.subtract('days',dateManualSelect);
+                      //end.subtract('days',dateManualSelect);
+                    }
+                  }
+                  if(start.format('DD.MM.YYYY') === check31.format('DD.MM.YYYY')){
+                    if(end.format('DD.MM.YYYY') === check32.format('DD.MM.YYYY')){
+                         selectionL = "3"; query3 = 1;
+                         //start.subtract('days',dateManualSelect);
+                      //end.subtract('days',dateManualSelect);
+                         
+                    }
+                  }
+                  if(start.format('DD.MM.YYYY') === check41.format('DD.MM.YYYY')){
+                    if(end.format('DD.MM.YYYY') === check42.format('DD.MM.YYYY')){
+                         selectionL = "4"; query4 = 1;
+                         //start.subtract('days',dateManualSelect);
+                      //end.subtract('days',dateManualSelect);
+                    }
+                  }
+                  if(start.format('DD.MM.YYYY') === check51.format('DD.MM.YYYY')){
+                    if(end.format('DD.MM.YYYY') === check52.format('DD.MM.YYYY')){
+                        selectionL = "5"; query5 = 1;
+                        // start.subtract('days',dateManualSelect);
+                      //end.subtract('days',dateManualSelect);
+                    }
+                  }
+                  if(start.format('DD.MM.YYYY') === check61.format('DD.MM.YYYY')){
+                    if(end.format('DD.MM.YYYY') === check62.format('DD.MM.YYYY')){
+                         selectionL = "6"; query6 = 1;
+                         //start.subtract('days',dateManualSelect);
+                     // end.subtract('days',dateManualSelect);
+                    }
+                  }
+                  if(start.format('DD.MM.YYYY') === check71.format('DD.MM.YYYY')){
+                    if(end.format('DD.MM.YYYY') === check72.format('DD.MM.YYYY')){
+                         selectionL = "7"; query7 = 1;
+                         //start.subtract('days',dateManualSelect);
+                      //end.subtract('days',dateManualSelect);
+                    }
+                  }
+                  if(start.format('DD.MM.YYYY') === check81.format('DD.MM.YYYY')){
+                    if(end.format('DD.MM.YYYY') === check82.format('DD.MM.YYYY')){
+                         selectionL = "8"; query8 = 1;
+                         //start.subtract('days',dateManualSelect);
+                      //end.subtract('days',dateManualSelect);
+                    }
+                  }
+                  
+                  if(selectionL === "0"){
+                    selectionL = 9;
+                   /* alert("selectionL: " + selectionL + ",,," +   
+                          "startDate:  " + start.format('YYYY-MM-DD') + ",,," + 
+                          "endDate:    " + end.format('YYYY-MM-DD'));
+                    */
+                  }
+                      
+                      startdatumL = start.format('DD.MM.YYYY') + ' ' + day4Screen1;
+                      enddatumL = end.format('DD.MM.YYYY') + ' ' + day4Screen2;
+                     
+                     // $.ajax({
+                     //    url: "index.php?r=statistik/changeDateViaSelectionLeft",
+                     //    type: "POST",
+                     //    data: { selectionL: selectionL,  
+                     //            startDate:  start.format('YYYY-MM-DD'), 
+                     //            endDate:    end.format('YYYY-MM-DD')
+                     //          },
+                     //    success: function(response) {
+                     //        document.getElementById("ajaxContainer").innerHTML = response;
+                     //    }     
+                     //  });
+                      $('#hiddenLabel').val(selectionL);  
+                      $('#hiddenLabel').trigger('input');
+                      $('#hiddenStartDate').val(start.format('YYYY-MM-DD'));  
+                      $('#hiddenStartDate').trigger('input');
+                      $('#hiddenEndDate').val(end.format('YYYY-MM-DD'));  
+                      $('#hiddenEndDate').trigger('input');
+                      
+                    if((start.format('DD.MM.YYYY') + ' ' + day4Screen1) !== end.format('DD.MM.YYYY') + ' ' + day4Screen2){
+                        $('#reportrange span').html(start.format('DD.MM.YYYY') + ' ' + day4Screen1 +  ' - ' + end.format('DD.MM.YYYY')  + ' ' + day4Screen2);  
+                    }else{
+                        $('#reportrange span').html(start.format('DD.MM.YYYY') + ' ' + day4Screen1);
+                    }
+                     }
+                  );
+                  //Set the initial state of the picker label
+                  
+                  
+                  if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[11] === 'M'){
+                    day4Screen1 = "Mo";
+                  }
+                  if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[11] === 'T'){
+                    if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[12] === 'u'){
+                        day4Screen1="Di";
+                    }
+                    if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[12] === 'h'){
+                        day4Screen1="Do";
+                    }
+                  }
+                  if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[11] === 'W'){
+                     day4Screen1="Mi";
+                  }
+                  if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[11] === 'F'){
+                    day4Screen1="Fr";
+                  }
+                  if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[11] === 'S'){
+                    if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[12] === 'a'){
+                      day4Screen1="Sa";
+                    }
+                    if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[12] === 'u'){
+                        day4Screen1="So";
+                    }
+                  }
+                  
+                  
+                  if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[11] === 'M'){
+                    day4Screen2 = "Mo";
+                  }
+                  if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[11] === 'T'){
+                    if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[12] === 'u'){
+                        day4Screen2="Di";
+                    }
+                    if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[12] === 'h'){
+                        day4Screen2="Do";
+                    }
+                  }
+                  if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[11] === 'W'){
+                     day4Screen2="Mi";
+                  }
+                  if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[11] === 'F'){
+                    day4Screen2="Fr";
+                  }
+                  if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[11] === 'S'){
+                    if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[12] === 'a'){
+                      day4Screen2="Sa";
+                    }
+                    if(moment().subtract('days', dateManualSelect).format('DD.MM.YYYY dd')[12] === 'u'){
+                        day4Screen2="So";
+                    }
+                  }
+                  if(dateManualSelect !== 0){ //alert("Achtung! Datum um " + dateManualSelect  + " Tage verschoben!");
+                  }
+                 // $.ajax({
+                 //        url: "index.php?r=statistik/changeDateViaSelectionLeft",
+                 //        type: "POST",
+                 //        data: { selectionL: "1",  
+                 //                startDate:  moment().subtract('days', dateManualSelect).format('YYYY-MM-DD'), 
+                 //                endDate:    moment().subtract('days', dateManualSelect).format('YYYY-MM-DD')
+                 //              },
+                 //        success: function(response) {
+                 //            document.getElementById("ajaxContainer").innerHTML = response;
+                 //        }     
+                 //      });
+                startdatumL = moment().subtract('days', dateManualSelect).format('DD.MM.YYYY') + ' ' + day4Screen1;
+                enddatumL = moment().subtract('days', dateManualSelect).format('DD.MM.YYYY') + ' ' + day4Screen2;
+                
+                if(startdatumL !== enddatumL){
+                    $('#reportrange span').html(startdatumL + ' - ' + enddatumL);
+                }else{
+                    $('#reportrange span').html(startdatumL);
+                }
+                  
+               });
+            function optionMenueOpen(){
+                alert("jetzt");
+            
+            }
+            function startup(){
+            
+            }   
+               
+            function startup2(){
+               alert("start:" + startdatumL + " end:" + enddatumL);
+            }
+            
+
+            var vglswert = new Array(100);
+            for (var i = 0; i < vglswert.length; ++i) {
+                vglswert[i] = i;
+            }
+            
+            
+            function que(nr) {
+              
+                //countVar = Anzahl der Datensätze
+               /* 
+                for(var i = 1; i< countVar; i++){
+                    if(nr === vglswert[i]){
+                        document.getElementById("navigKasse").innerHTML+='<a href="#">Kasse_Item'+nr+'</a><span onClick="javascript:closeque();">Schließen</span>';
+                        alert("Neue DB-Abfrage oder ein Popup möglich!");        
+                    }
+                    vglswert[i] = "0";
+                }*/
+            }
+            
+            function closeque(){
+                //Startwerte wiederherstellen
+                for (var i = 0; i < vglswert.length; ++i) {
+                vglswert[i] = i;
+                }
+                document.getElementById("navigKasse").innerHTML = '<a href="#">Kasse</a>';
+            }
+           
+            
+            
+        </script>
+
+
+
+    
+   
+</html>
+

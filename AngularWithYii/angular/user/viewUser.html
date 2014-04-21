@@ -1,0 +1,52 @@
+<div class="span-19">
+	<div id="content">
+
+		<h1>View User #{{User.id}}</h1>
+
+		<table class="detail-view" id="yw0">
+			<tr class="odd">
+				<th>ID</th>
+				<td>{{User.id}}</td>
+			</tr>
+			<tr class="even">
+				<th>Username</th>
+				<td>{{User.username}}</td>
+			</tr>
+			<tr class="odd">
+				<th>Password</th>
+				<td>{{User.password}}</td>
+			</tr>
+			<tr class="even">
+				<th>Email</th>
+				<td>{{User.email}}</td>
+			</tr>
+		</table>
+	
+	
+
+</div> <!-- content -->
+</div>
+
+
+
+
+</div>
+<div class="span-5 last">
+	<div id="sidebar">
+		<div class="portlet" id="yw1">
+			<div class="portlet-decoration">
+				<div class="portlet-title">Operations</div>
+			</div>
+			<div class="portlet-content">
+				<ul class="operations" id="yw2">
+					<li><a href="#/user">List User</a></li>
+					<li><a href="#/createuser">Create User</a></li>
+					<li><a href="#/updateuser/{{User.id}}">Update User</a></li>
+					<li><a href="#" id="yt0" ng-really-message="Are you sure?" 
+							ng-really-click="delete({{User}})"/>Delete User</a></li>
+					<li><a href="#/useradmin">Manage User</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- sidebar -->

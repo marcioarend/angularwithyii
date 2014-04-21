@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  
+  $("#driver").click(function(event){
+            $("#div1").empty();
+            $.ajax({              
+              url: "/index.php?r=user/index",
+              success: function(data, status) { // <-- note the parameter here, not in your code
+                  $.each($.parseJSON(data),function(i,field){
+                      $("div").append(field.id + " " + field.username +" <br> " );
+                  });
+              },
+              error:function(response){
+                    console.log(response);
+                    alert("failure");
+              }
+      });
+});
+});  
+</script>
+</head>
+<body>
+
+<div id="div1"></div>
+
+<input type="button" id="driver" value="Load Data" />
+</body>
+</html>

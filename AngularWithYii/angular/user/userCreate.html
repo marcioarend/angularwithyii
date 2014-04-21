@@ -1,0 +1,66 @@
+<div class="span-19">
+	<div id="content">
+
+		<h1>Create User</h1>
+		<div class="form">
+
+
+			<p class="note">
+				Fields with <span class="required">*</span> are required.
+			</p>
+
+
+			<div class="row">
+				<label for="User_username" class="required">Username <span
+					class="required">*</span></label> <input size="60" maxlength="128"
+					name="User[username]" id="User_username" type="text"
+					ng-model="User.username" />
+			</div>
+
+			<div class="row">
+				<label for="User_password" class="required">Password <span
+					class="required">*</span></label> <input size="60" maxlength="128"
+					name="User[password]" id="User_password" type="password"
+					ng-model="User.password" />
+			</div>
+
+			<div class="row">
+				<label for="User_email" class="required">Email <span
+					class="required">*</span></label> <input size="60" maxlength="128"
+					name="User[email]" id="User_email" type="text"
+					ng-model="User.email" />
+			</div>
+
+			<div class="row buttons">
+				<button ng-click="addUser()">Create User</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+<div class="span-5 last">
+	<div id="sidebar">
+		<div class="portlet" id="yw2">
+			<div class="portlet-decoration">
+				<div class="portlet-title">Operations</div>
+			</div>
+			<div class="portlet-content">
+				<ul class="operations" id="yw3">
+					<li><a href="#/useradmin">Manage User</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- sidebar -->
+</div>
+
+
+
+
+
+
+

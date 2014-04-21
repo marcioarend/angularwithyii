@@ -1,0 +1,41 @@
+<div class="span-19">
+	<div id="content">
+		<h1>Users</h1>
+		<div id="yw0" class="list-view">
+
+			<div class="items" ng-repeat="user in users">
+
+				<div class="view">
+					<b>ID:</b> <a href="#/viewuser/{{user.id}}">{{user.id}}</a>
+					<br /> <b>Username:</b>{{user.username}}<br /> <b>Password:</b>{{user.password}}<br />
+					<b>Email:</b>{{user.email}} <br />
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="span-5 last">
+	<div id="sidebar">
+		<div class="portlet" id="yw2">
+			<div class="portlet-decoration">
+				<div class="portlet-title">Operations</div>
+			</div>
+			<div class="portlet-content">
+				<ul class="operations" id="yw3">
+					<li><a href="#/createuser">Create User</a></li>
+					<li><a href="#/useradmin">Manage User</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- sidebar -->
+</div>
+
+
+
+
