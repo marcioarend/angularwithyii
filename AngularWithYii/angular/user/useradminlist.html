@@ -5,38 +5,49 @@
 
 		<h1>Manage Users</h1>
 
-
+		<div contador-menu  id="menu">
+			Menu
+		</div>
+		<div contador-menu  id="about">
+			About
+		</div>
+		<div contador-menu  id="contact">
+			Contact
+		</div>
 		<div id="user-grid" class="grid-view">
 
 			<table class="items">
 				<thead>
+					
+					<tr class="filters">
+						
+						<td> Search</td>
+						<td ><input name="User" type="text" ng-model="search"  maxlength="20"/></td>
+						
+						<td colspan="3">&nbsp;</td>
+					</tr>
+					
 					<tr>
 						<th id="user-grid_c0"><a class="sort-link"
-							href="/index.php?r=user/admin&amp;User_sort=id">ID</a></th>
+							>ID</a></th>
 						<th id="user-grid_c1"><a class="sort-link"
-							href="/index.php?r=user/admin&amp;User_sort=username">Username</a></th>
+							>Username</a></th>
 						<th id="user-grid_c2"><a class="sort-link"
-							href="/index.php?r=user/admin&amp;User_sort=password">Password</a></th>
+							>Password</a></th>
 						<th id="user-grid_c3"><a class="sort-link"
-							href="/index.php?r=user/admin&amp;User_sort=email">Email</a></th>
+							>Email</a></th>
 						<th class="button-column" id="user-grid_c4">&nbsp;</th>
 					</tr>
-					<tr class="filters">
-						<td><input name="User[id]" type="text" /></td>
-						<td><input name="User[username]" type="text" maxlength="128" /></td>
-						<td><input name="User[password]" type="text" maxlength="128" /></td>
-						<td><input name="User[email]" type="text" maxlength="128" /></td>
-						<td>&nbsp;</td>
-					</tr>
+					
 				</thead>
 				<tbody>
 
 					<tr ng-class-odd="'odd'" ng-class-even="'even'"
-						ng-repeat="user in users">
-						<td>{{user.id}}</td>
+						ng-repeat="user in users | orderBy:'name'  | filter:search">
+						<td>{{user.id }}</td>
 						<td>{{user.username}}</td>
-						<td>{{user.password}}</td>
-						<td>{{user.email}}</td>
+						<td>{{user.password | inverter}}</td>
+						<td>{{user.email }}</td>
 						<td class="button-column">
 						    <a class="view" title="View"
 							href="#/viewuser/{{user.id}}"><img

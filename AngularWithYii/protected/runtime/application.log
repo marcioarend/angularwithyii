@@ -400,3 +400,6 @@ HTTP_REFERER=http://angularyii.com/angular/
 2014/04/29 10:04:46 [warning] [application] Failed to set unsafe attribute "id" of "User".
 in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/UserController.php (113)
 in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/04/29 17:41:33 [warning] [application] Failed to set unsafe attribute "id" of "User".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/UserController.php (113)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)

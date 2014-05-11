@@ -1,4 +1,6 @@
-var myApp = angular.module("myApp", [ 'ngRoute' ]).directive('ngReallyClick',
+var myApp = angular.module("myApp", [ 'ngRoute' ]);
+
+myApp.directive('ngReallyClick',
 		[ function() {
 			return {
 				restrict : 'A',
@@ -15,11 +17,46 @@ var myApp = angular.module("myApp", [ 'ngRoute' ]).directive('ngReallyClick',
 
 
 myApp.value('rootAdresse','/index.php?r=');
-myApp.factory('clientId', function clientIdFactory(){
-	return 'odododdo';
+
+//CamelCase is converted to -. testDirective will be test-directive
+myApp.directive('testDirective', function(){
+	return {
+		// restrict: "A", default is Attribute  
+		template: "<div> ola. Esse elemento foi criado por uma diretiva </div>"
+	}
 });
 
-myApp.factory('UserFactory', function($http,$location,rootAdresse	){
+myApp.directive('contadorMenu', function(){
+	var enterValue =0;
+	var leaveValue =0;
+	var timeEnter = '';
+	
+	
+	return function($scope,$element){
+		var i=0;
+		$element.bind("mouseenter",function(){
+			var d = new Date();
+			timeEnter = d.getTime();
+			console.log(" enter " + this.id + "  " + enterValue++);
+		})
+		$element.bind("mouseleave",function(){
+			console.log(" leave " + this.id + "  " + leaveValue++);
+			var d = new Date();
+			var timeLapse = d.getTime() - timeEnter;
+			console.log(" time in " + this.id + "  " + timeLapse);
+		})
+	}
+});
+
+
+
+myApp.filter('inverter', function (){
+	return function (text){
+		return text.split("").reverse().join("");
+	}	
+});
+
+myApp.factory('UserFactory',['$http','$location','rootAdresse', function($http,$location,rootAdresse){
 		var functions = {};
 		functions.getUsers = function(){
 			var value = $http.get(rootAdresse+ 'user').success(
@@ -76,7 +113,7 @@ myApp.factory('UserFactory', function($http,$location,rootAdresse	){
 		return functions;
 	
 	
-});
+}]);
 
 myApp.config([ '$routeProvider', function($routeProvider) {
 	$routeProvider.when('/user', {
@@ -106,22 +143,21 @@ myApp.config([ '$routeProvider', function($routeProvider) {
 
 
 
-myApp.controller('UsersLoadController', function($scope, $http,UserFactory) {
+myApp.controller('UsersLoadController',['$scope', 'UserFactory', function($scope,UserFactory) {
 	UserFactory.getUsers().then(function (value){
 		$scope.users = value.data;
 	});
 
+}]);
 
-});
-
-myApp.controller('UserCreateController', function($scope, $http, $location,UserFactory) {
+myApp.controller('UserCreateController',['$scope', 'UserFactory', function($scope,UserFactory) {
 	$scope.addUser = function() {
 		UserFactory.addUser($scope.User);
 	}
 
-});
+}]);
 
-myApp.controller('UserViewController', function($scope, $http, $routeParams,$location,UserFactory) {
+myApp.controller('UserViewController',['$scope', '$routeParams','UserFactory', function($scope, $routeParams,UserFactory) {
 	UserFactory.viewUser($routeParams.user_id).then(function(value){
 		$scope.User = value.data;
 	});
@@ -130,9 +166,9 @@ myApp.controller('UserViewController', function($scope, $http, $routeParams,$loc
 		UserFactory.deleteUser(data.id);
 	}
 
-});
+}]);
 
-myApp.controller('UserUpdateController', function($scope, $http, $routeParams,$location,UserFactory) {
+myApp.controller('UserUpdateController',['$scope', '$routeParams','UserFactory', function($scope, $routeParams,UserFactory) {
 	UserFactory.viewUser($routeParams.user_id).then(function(value){
 		$scope.User = value.data;
 	});
@@ -141,9 +177,9 @@ myApp.controller('UserUpdateController', function($scope, $http, $routeParams,$l
 	$scope.updateUser = function() {
 		UserFactory.update($scope.User);
 	}
-});
+}]);
 
-myApp.controller('UserListAdminController', function($scope, $http,$location,rootAdresse) {
+myApp.controller('UserListAdminController', ['$scope', 'UserFactory', function($scope,UserFactory) {
 	UserFactory.getUsers().then(function (value){
 		$scope.users = value.data;
 	});
@@ -152,7 +188,7 @@ myApp.controller('UserListAdminController', function($scope, $http,$location,roo
 		UserFactory.deleteUser(data.id);
 	}
 
-});
+}]);
 
 
 myApp.controller('LoginController',function($http){
