@@ -403,3 +403,952 @@ in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
 2014/04/29 17:41:33 [warning] [application] Failed to set unsafe attribute "id" of "User".
 in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/UserController.php (113)
 in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 18:09:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statistic".' in /home/marcio/git/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('statistic')
+#1 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=statistic
+HTTP_REFERER=http://angularyii.com/angular/
+---
+2014/05/12 18:09:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statistic".' in /home/marcio/git/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('statistic')
+#1 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=statistic
+HTTP_REFERER=http://angularyii.com/angular/
+---
+2014/05/12 18:09:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statistic".' in /home/marcio/git/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('statistic')
+#1 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=statistic
+HTTP_REFERER=http://angularyii.com/angular/
+---
+2014/05/12 18:09:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "statistic".' in /home/marcio/git/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('statistic')
+#1 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=statistic
+HTTP_REFERER=http://angularyii.com/angular/
+---
+2014/05/12 19:22:54 [error] [exception.CException] exception 'CException' with message 'StatisticController cannot find the requested view "index".' in /home/marcio/git/yii/framework/web/CController.php:878
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php(7): CController->render('index')
+#2 /home/marcio/git/yii/framework/web/actions/CInlineAction.php(49): StatisticController->actionIndex()
+#3 /home/marcio/git/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/marcio/git/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/marcio/git/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/marcio/git/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('statistic')
+#8 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=statistic
+HTTP_REFERER=http://angularyii.com/index.php?r=gii/controller/index
+---
+2014/05/12 19:25:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'angularwithyii.statistic' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `statistic`.
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:33:50 [error] [exception.CException] exception 'CException' with message 'StatisticController cannot find the requested view "index".' in /home/marcio/git/yii/framework/web/CController.php:878
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php(7): CController->render('index')
+#2 /home/marcio/git/yii/framework/web/actions/CInlineAction.php(49): StatisticController->actionIndex()
+#3 /home/marcio/git/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/marcio/git/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/marcio/git/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/marcio/git/yii/framework/web/CWebApplication.php(282): CController->run('')
+#7 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('statistic')
+#8 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=statistic
+HTTP_REFERER=http://angularyii.com/angular/
+---
+2014/05/12 19:40:25 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (17)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:41:03 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (17)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:41:04 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (17)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:41:04 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (17)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:41:04 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (17)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:41:07 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (17)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:41:43 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:42:16 [error] [php] Array to string conversion (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:14)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (14)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:42:16 [error] [php] Array to string conversion (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:14)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (14)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:42:16 [error] [php] Array to string conversion (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:14)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (14)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:42:16 [error] [php] Array to string conversion (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:14)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (14)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:42:18 [error] [php] Array to string conversion (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:14)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (14)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:42:37 [error] [php] Array to string conversion (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:14)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (14)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:42:38 [error] [php] Array to string conversion (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:14)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (14)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:43:32 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:43:35 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:43:53 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:45:41 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (20)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:46:18 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (20)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:48:21 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (20)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:48:21 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (20)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:48:21 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (20)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:48:23 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (20)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:48:23 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (20)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:50:15 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (20)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:50:43 [error] [php] Array to string conversion (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:14)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (14)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:50:43 [error] [php] Array to string conversion (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:14)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (14)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:50:44 [error] [php] Array to string conversion (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:14)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (14)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:51:09 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:51:47 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:52:20 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:52:20 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:52:20 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:52:20 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:52:20 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:52:20 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:52:23 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:54:16 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:54:18 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:54:19 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:54:19 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:54:20 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:54:20 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:54:20 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:54:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:54:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:54:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:55:19 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:55:19 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:55:19 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:55:29 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:55:30 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:55:31 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:55:31 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:55:31 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:57:58 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:58:57 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 19:59:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:00:01 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:00:04 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:00:04 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:00:05 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:29 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:29 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:29 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:30 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:49 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:50 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:50 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:50 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:51 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:51 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:52 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:54 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:02:55 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:24:05 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:24:05 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:24:09 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:24:10 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:24:10 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:24:10 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:24:13 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:25:04 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:25:04 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:29:34 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:29:34 [warning] [application] Failed to set unsafe attribute "in" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:29:34 [warning] [application] Failed to set unsafe attribute "out" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:29:44 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:29:44 [warning] [application] Failed to set unsafe attribute "in" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:29:44 [warning] [application] Failed to set unsafe attribute "out" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:29:44 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:29:44 [warning] [application] Failed to set unsafe attribute "in" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:29:44 [warning] [application] Failed to set unsafe attribute "out" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:30:54 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:30:54 [warning] [application] Failed to set unsafe attribute "in" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:30:54 [warning] [application] Failed to set unsafe attribute "out" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:30:55 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:30:55 [warning] [application] Failed to set unsafe attribute "in" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:30:55 [warning] [application] Failed to set unsafe attribute "out" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:31:42 [error] [php] Use of undefined constant model - assumed 'model' (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:15)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (15)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:31:42 [error] [php] Use of undefined constant model - assumed 'model' (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:15)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (15)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:31:42 [error] [php] Use of undefined constant model - assumed 'model' (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:15)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (15)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:31:51 [error] [php] Use of undefined constant model - assumed 'model' (/home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php:15)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#1 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#2 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#3 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (15)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:38:34 [warning] [application] Failed to set unsafe attribute "in" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:39:37 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (18)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:23 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:24 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:24 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:24 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:24 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:25 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:38 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:54 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:55 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:55 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:56 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:56 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 20:40:57 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:20:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:20:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:20:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:20:37 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:20:50 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:20:52 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:20:52 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:20:52 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:21:39 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:29:11 [error] [php] Invalid argument supplied for foreach() (/home/marcio/git/yii/framework/db/schema/CDbCommandBuilder.php:670)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/actions/CInlineAction.php(49): StatisticController->actionIndex()
+#1 /home/marcio/git/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#3 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#4 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#5 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (21)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:29:26 [error] [php] Invalid argument supplied for foreach() (/home/marcio/git/yii/framework/db/schema/CDbCommandBuilder.php:670)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/actions/CInlineAction.php(49): StatisticController->actionIndex()
+#1 /home/marcio/git/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#3 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#4 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#5 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (21)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:29:26 [error] [php] Invalid argument supplied for foreach() (/home/marcio/git/yii/framework/db/schema/CDbCommandBuilder.php:670)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/actions/CInlineAction.php(49): StatisticController->actionIndex()
+#1 /home/marcio/git/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#3 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#4 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#5 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (21)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:29:26 [error] [php] Invalid argument supplied for foreach() (/home/marcio/git/yii/framework/db/schema/CDbCommandBuilder.php:670)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/actions/CInlineAction.php(49): StatisticController->actionIndex()
+#1 /home/marcio/git/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#3 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#4 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#5 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (21)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:30:12 [error] [php] Invalid argument supplied for foreach() (/home/marcio/git/yii/framework/db/schema/CDbCommandBuilder.php:670)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/actions/CInlineAction.php(49): StatisticController->actionIndex()
+#1 /home/marcio/git/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#3 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#4 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#5 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (21)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:30:35 [error] [php] Invalid argument supplied for foreach() (/home/marcio/git/yii/framework/db/schema/CDbCommandBuilder.php:670)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/actions/CInlineAction.php(49): StatisticController->actionIndex()
+#1 /home/marcio/git/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#3 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#4 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#5 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (21)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:30:54 [error] [php] Invalid argument supplied for foreach() (/home/marcio/git/yii/framework/db/schema/CDbCommandBuilder.php:670)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/actions/CInlineAction.php(49): StatisticController->actionIndex()
+#1 /home/marcio/git/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#3 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#4 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#5 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:31:08 [error] [php] Invalid argument supplied for foreach() (/home/marcio/git/yii/framework/db/schema/CDbCommandBuilder.php:670)
+Stack trace:
+#0 /home/marcio/git/yii/framework/web/actions/CInlineAction.php(49): StatisticController->actionIndex()
+#1 /home/marcio/git/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/marcio/git/yii/framework/web/CController.php(286): StatisticController->runAction()
+#3 /home/marcio/git/yii/framework/web/CController.php(265): StatisticController->runActionWithFilters()
+#4 /home/marcio/git/yii/framework/web/CWebApplication.php(282): StatisticController->run()
+#5 /home/marcio/git/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#6 /home/marcio/git/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=statistic
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (16)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:17 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:35 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:37 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:37 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:37 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:37 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:37 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:37 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:38 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:39 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:39 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:39 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:39 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:39 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:39 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:39 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:39 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:40 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:41 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:41 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:41 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:41 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:41 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:41 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:37:41 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (31)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:44 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:44 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:44 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:44 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:44 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:44 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:44 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:45 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:45 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:45 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:45 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:45 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:45 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:45 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:45 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:45 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:46 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:47 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:48 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:48 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:48 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:49 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:49 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:49 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:49 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:49 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:49 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:49 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:49 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:50 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:50 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:50 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:50 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:38:50 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:40:36 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:11 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:12 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:12 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:12 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:27 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)
+2014/05/12 21:42:27 [warning] [application] Failed to set unsafe attribute "idElement" of "Statistic".
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/protected/controllers/StatisticController.php (27)
+in /home/marcio/git/com.arend.angularwithyii/AngularWithYii/index.php (13)

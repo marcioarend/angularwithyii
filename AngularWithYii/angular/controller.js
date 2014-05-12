@@ -26,7 +26,7 @@ myApp.directive('testDirective', function(){
 	}
 });
 
-myApp.directive('contadorMenu', function(){
+myApp.directive('contadorMenu', function(StatisticFactory){
 	var enterValue =0;
 	var leaveValue =0;
 	var timeEnter = '';
@@ -37,13 +37,19 @@ myApp.directive('contadorMenu', function(){
 		$element.bind("mouseenter",function(){
 			var d = new Date();
 			timeEnter = d.getTime();
-			console.log(" enter " + this.id + "  " + enterValue++);
+			//console.log(" enter " + this.id + "  " + enterValue++);
 		})
 		$element.bind("mouseleave",function(){
-			console.log(" leave " + this.id + "  " + leaveValue++);
+			//console.log(" leave " + this.id + "  " + leaveValue++);
 			var d = new Date();
 			var timeLapse = d.getTime() - timeEnter;
-			console.log(" time in " + this.id + "  " + timeLapse);
+			//console.log(" time in " + this.id + "  " + timeLapse);
+			values={"idElement" : this.id,
+					"inValue" :timeEnter,
+					"outValue":d.getTime(),
+					"sessionID" :"axsasef234"};
+			StatisticFactory.setStatistic(values);
+			
 		})
 	}
 });
@@ -55,6 +61,21 @@ myApp.filter('inverter', function (){
 		return text.split("").reverse().join("");
 	}	
 });
+
+myApp.factory('StatisticFactory' , ['$http','rootAdresse', function ($http,rootAdresse){
+		var functions = {};
+		functions.setStatistic = function(statisticValue){
+			var value = $http.post(rootAdresse+ 'statistic',statisticValue).
+			success(function(data,status,headers,config){
+				console.log(status);
+			}).
+			error(function(data,status,headers,config){
+				console.log(status);
+			});
+			return value;
+		};
+		return functions;
+}]);
 
 myApp.factory('UserFactory',['$http','$location','rootAdresse', function($http,$location,rootAdresse){
 		var functions = {};
