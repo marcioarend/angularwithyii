@@ -4,24 +4,9 @@
 	<div id="content">
 
 		<h1>Manage Users</h1>
+		<div contador-menu id="user-grid" class="grid-view"  ng-controller="mousePosition">
 
-		<div contador-menu  id="menu">
-			Menu
-		</div>
-		<div contador-menu  id="about">
-			About
-		</div>
-		<div contador-menu  id="contact">
-			Contact
-		</div>
-		<div contador-menu  id="Produtos">
-			Produtos
-		</div>
-		
-		
-		<div id="user-grid" class="grid-view">
-
-			<table class="items">
+			<table class="items" ng-mousemove="myposition($event)">
 				<thead>
 					
 					<tr class="filters">

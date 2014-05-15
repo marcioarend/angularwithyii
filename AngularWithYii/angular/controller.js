@@ -56,6 +56,7 @@ myApp.directive('contadorMenu', function(StatisticFactory){
 
 
 
+
 myApp.filter('inverter', function (){
 	return function (text){
 		return text.split("").reverse().join("");
@@ -74,6 +75,17 @@ myApp.factory('StatisticFactory' , ['$http','rootAdresse', function ($http,rootA
 			});
 			return value;
 		};
+		functions.setPosition = function(positions){
+			console.log(positions)
+			$http.post(rootAdresse+ 'statistic/position',positions).success(function (status,data){
+				console.log(status);
+				console.log(data);
+				
+			}).error(function (status,data){
+				
+			});
+		}
+		
 		return functions;
 }]);
 
@@ -160,6 +172,18 @@ myApp.config([ '$routeProvider', function($routeProvider) {
 	});
 }]);
 
+
+
+myApp.controller('mousePosition',['$scope','StatisticFactory', function($scope,StatisticFactory){
+	$scope.myposition = function(event){
+		values={"X" :event.pageX,
+				"Y": event.pageY,
+				"sessionID" :"axsasef234"};
+		StatisticFactory.setPosition(values);
+
+	}
+	
+}]);
 
 
 
