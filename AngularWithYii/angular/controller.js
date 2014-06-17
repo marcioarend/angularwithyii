@@ -31,15 +31,15 @@ myApp.directive('contadorMenu', function(StatisticFactory){
 	var leaveValue =0;
 	var timeEnter = '';
 	
-	
-	return function($scope,$element){
+	//scope,element,attr
+	return function(scope,element){
 		var i=0;
-		$element.bind("mouseenter",function(){
+		element.bind("mouseenter",function(){
 			var d = new Date();
 			timeEnter = d.getTime();
 			//console.log(" enter " + this.id + "  " + enterValue++);
 		})
-		$element.bind("mouseleave",function(){
+		element.bind("mouseleave",function(){
 			//console.log(" leave " + this.id + "  " + leaveValue++);
 			var d = new Date();
 			var timeLapse = d.getTime() - timeEnter;
@@ -78,7 +78,7 @@ myApp.factory('StatisticFactory' , ['$http','rootAdresse', function ($http,rootA
 		functions.setPosition = function(positions){
 			console.log(positions)
 			$http.post(rootAdresse+ 'statistic/position',positions).success(function (status,data){
-				console.log(status);
+//				console.log(status);
 				console.log(data);
 				
 			}).error(function (status,data){

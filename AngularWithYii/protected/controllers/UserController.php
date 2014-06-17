@@ -1,5 +1,6 @@
 <?php
-
+header('content-type: application/json; charset=utf-8');
+header("access-control-allow-origin: *");
 class UserController extends Controller
 {
 	/**
@@ -9,17 +10,77 @@ class UserController extends Controller
 	// for testing I am using the layout, but to Json return I "turn it off"
  	public $layout='//layouts/column2';
 
+ 	
 	/**
 	 * @return array action filters
 	 */
 	public function filters()
 	{
-// 		return array(
-// 			'accessControl', // perform access control for CRUD operations
-// 			'postOnly + delete', // we only allow deletion via POST request
-// 		);
+		
+		//@TODO verificacao se o usuario esta logado
+// 		$values = apache_request_headers();
+// 		echo $values["Authorization"];
+// 		die();
+// 		throw new CHttpException(404,'The requested page does not exist.');
+// 		throw new CHttpException(403,"you must login first");
+		
+			
+
+	}
+	
+	public function validate($values , $role = ""){ 
+		if (isset($values["Authorization"])){
+			$val = $values["Authorization"];
+		
+			$subString = substr($val, -3);
+			if ($subString === $role){
+				return true;
+			}	
+		}
+		return false;
 	}
 
+	public function actionLogin(){
+
+		$this->layout=false;
+		$values = apache_request_headers();
+		
+		
+		header('Content-type: application/json');
+		$postdata = file_get_contents("php://input");
+		$request = CJSON::decode($postdata);
+		$user = array();
+		
+		if (empty($values["Authorization"])){
+			if ($request["password"] == "admin" and $request["username"] == "admin"){
+					$user["sessionId"]= uniqid() . "_adm";
+					$user["role"] = "admin";
+					$user["id"] = 1;
+					$user["name"] = "Administrador";
+			}else {
+					$user["sessionId"]= uniqid() .  "_usr";
+					$user["role"] = "user";
+					$user["id"] = 2;
+					$user["name"] = "Marcio Arend";
+			}
+			
+			echo CJSON::encode($user);
+		}else {
+			echo $values["Authorization"];
+		}
+		
+		// 		$result = $this->loadModel($id);
+		// 		echo CJSON::encode($result);
+		die();
+		// 		$this->render('view',array(
+		// 			'model'=>$this->loadModel($id),
+		// 		));
+	
+	
+	
+	}
+	
+	
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
@@ -52,11 +113,20 @@ class UserController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->layout=false;
-		header('Content-type: application/json');
-		$result = $this->loadModel($id);
 		
-		echo CJSON::encode($result);
+		$this->layout=false;
+		
+		$values = apache_request_headers();
+		if ( $this->validate($values,"adm") == true ){
+			header('Content-type: application/json');
+			$postdata = file_get_contents("php://input");
+			$request = CJSON::decode($postdata);
+			$result = $this->loadModel($id);
+			echo CJSON::encode($result);
+		}else {
+			header('HTTP/1.0 403 Error');
+		}
+		
 		die();
 // 		$this->render('view',array(
 // 			'model'=>$this->loadModel($id),
@@ -142,14 +212,26 @@ class UserController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('User');
-		$stats = User::model()->findAll();
-		$retornoJson = CJSON::encode($stats);
-		echo $retornoJson;
+		
+		
+		$values = apache_request_headers();
+		
+		
+		if ($this->validate($values,"adm")== true  or $this->validate($values,"usr") == true){
+			$dataProvider=new CActiveDataProvider('User');
+			$stats = User::model()->findAll();
+			$retornoJson = CJSON::encode($stats);
+			echo $retornoJson;
+		} else {
+			header('HTTP/1.0 401 Error');
+		}
+			
+		
+		
 		die();
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+// 		$this->render('index',array(
+// 			'dataProvider'=>$dataProvider,
+// 		));
 	}
 
 	/**
