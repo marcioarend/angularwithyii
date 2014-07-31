@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myAuth">
+<head>
+<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+
+	<!-- blueprint CSS framework -->
+	<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="/css/form.css" />
+
+
+<title>Single page application</title>
+</head>
+<body ng-controller="ApplicationController">
+
+
+<div >
+	<ng-view>
+		<div data-alert class="alert-box alert radius" ng-show="information.show">
+  		{{information.message}}
+  		<a href="#" class="close">&times;</a>
+	</div>
+	
+	</ng-view>
+
+</div>
+
+<div>
+	<button ng-click="showLoginInfos()">Test Login</button>
+</div>
+
+
+<script src="angular.js"></script>
+<script src="angular-route.js"></script>
+<script type="text/javascript" src="autentication.js"></script>
+<link rel="stylesheet" href="foundation.css">
+</body>
+</html>
